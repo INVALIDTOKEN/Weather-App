@@ -1,0 +1,18 @@
+{
+  "name": "two",
+  "version": "1.0.0",
+  "description": "A WeatherApp",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "author": "Sahil Kapoor",
+  "license": "MIT",
+  "dependencies": {
+    "axios": "^0.17.1",
+    "chart.js": "^2.7.1",
+    "express": "^4.16.2",
+    "pug": "^2.0.0-rc.4"
+  }
+}

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+html(lang="en")
+    head
+        meta(charset="UTF-8")
+        meta(name="viewport", content="width=device-width, initial-scale=1.0")
+        meta(http-equiv="X-UA-Compatible", content="ie=edge")
+        link(href="https://fonts.googleapis.com/css?family=Joti+One|PT+Sans" rel="stylesheet")
+        script(src = "https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.1/Chart.min.js")
+        link(rel="stylesheet", href="/static/css/style.css")
+        title GetWeather | #{place}
+    body
+        header
+            div.container
+                div.top-nav
+                    h1 GetWeather
+                    p #{fullDate}
+
+        
+        section.showcase
+            .container
+                form(action="/", method = "POST")
+                    input(type="text", name = "getWeather")
+                    button(class = "ripple", type = "submit") GetWeather
+        
+        section.getAll  
+            .container
+                h1 Get all the weather data across the world!
+
+        block section
+
+        footer
+            p &copy; SYNTAX ERROR
+        
+        script(src = "/static/script.js")
+        script(src = "/static/validate.js")
+        script(src = "/static/chart.js")
+
+        

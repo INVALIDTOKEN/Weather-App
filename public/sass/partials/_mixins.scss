@@ -1,0 +1,25 @@
+
+
+@mixin mar-pad($margin : 0, $padding : 0){
+    margin: $margin;
+    padding: $padding;
+    @content;
+}
+
+@mixin border($border: 0, $border-radius: 0){
+    border: $border;
+    border-radius: $border-radius;
+    @content;
+}
+
+
+
+
+
+
+
+
+
+
+
+

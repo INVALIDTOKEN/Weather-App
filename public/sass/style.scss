@@ -1,0 +1,48 @@
+
+@import "partials/variables",
+        "partials/mixins";
+
+// GLOBAL STYLES
+
+*{
+    box-sizing: border-box;
+}
+
+.container{
+    width: 95%;
+    margin: auto;
+}
+
+h1,p,h3,h2,h4,body{
+    @include mar-pad;
+}
+
+body{
+    background-color: #f4f4f4;
+    font-family: 'PT Sans', sans-serif;
+}
+
+@import "partials/topNavStyles.scss",
+        "partials/showcaseStyles.scss",
+        "partials/tableStyles.scss",
+        "partials/footerStyles.scss",
+        "partials/searchStyles.scss";
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

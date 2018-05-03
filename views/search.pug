@@ -1,0 +1,58 @@
+extends layout.pug
+
+block section
+    section.searchSection
+        .container
+            .search
+
+                .result
+                    h1 Current weather in #{today.place}
+
+                    div
+                        img(src=`./static/icon/${today.icon}.png`, alt="Image")
+                        p
+                            strong #{today.temperature} °C 
+                    
+                    table.details
+                        tr
+                            td 
+                                strong Max / Min
+                            td
+                                strong #{today.maxTemp} °C / #{today.minTemp} °C
+                        
+                        tr
+                            td STATUS
+                            td #{today.main}  
+
+                        tr
+                            td WindSpeed
+                            td Speed #{today.windSpeed} m/s, #{today.windDegree} Deg  
+
+                        tr
+                            td Cloudiness
+                            td #{today.clouds}
+
+                        tr
+                            td Pressure
+                            td #{today.pressure} hpa
+
+                        tr 
+                            td Humidity
+                            td #{today.humidity}%
+                        
+                        tr 
+                            td Sunrise
+                            td #{today.sunrise}
+                        
+                        tr
+                            td Sunset
+                            td #{today.sunset}
+                        
+                        tr 
+                            td Geo Coords
+                            td [#{today.latitude}, #{today.longitude}]
+
+                
+                
+                .chart
+                    canvas(id = "myChart")

@@ -1,0 +1,53 @@
+extends layout.pug
+
+block section
+    section
+        .container
+            div.allTheWeather
+
+                each object in objects
+                    div.Weather
+                        h1 Weather in #{object.place}
+                        div
+                            img(src=`/static/icon/${object.icon}.png`, alt="Image")
+                            p
+                                strong #{object.temperature} °C
+                        table.details
+                            tr
+                                td 
+                                    strong Max/Min
+                                td 
+                                    strong #{object.maxTemp} °C / #{object.minTemp} °C
+
+                            tr
+                                td STATUS
+                                td #{object.main}
+                                                  
+                            tr
+                                td Wind
+                                td Speed: #{object.windSpeed} m/s, #{object.windDegree} Deg
+                            
+                            tr
+                                td Cloudiness
+                                td #{object.clouds}
+                            
+                            tr
+                                td Pressure
+                                td #{object.pressure} hpa
+
+                            tr
+                                td Humidity
+                                td #{object.humidity}%
+                            
+                            tr
+                                td Sunrise
+                                td #{object.sunrise}
+                            
+                            tr
+                                td Sunset
+                                td #{object.sunset}
+                            
+                            tr 
+                                td Geo Coords
+                                td [#{object.longitude}, #{object.latitude}]           
+                                

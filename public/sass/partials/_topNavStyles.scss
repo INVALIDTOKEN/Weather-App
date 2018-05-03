@@ -1,0 +1,37 @@
+// TOP NAV STYLES
+
+header{
+    background-color:darken($color: $topNav-background-color, $amount: 5%);
+    color: white;
+}
+
+.top-nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 40px;
+
+    h1{
+        font-size: $topNav-small-h1;
+        font-family: 'Joti One', cursive;
+
+        @media(min-width: $small-width){
+            font-size: $topNav-medium-h1;
+        }
+
+        @media(min-width: $medium-width){
+            font-size: $topNav-large-h1;
+        }
+    }
+
+    p{
+        font-size: $topNav-small-p;
+        @media(min-width: $small-width){
+            font-size: $topNav-medium-p;
+        }
+
+        @media(min-width: $medium-width){
+            font-size: $topNav-large-p;
+        }
+    }
+}

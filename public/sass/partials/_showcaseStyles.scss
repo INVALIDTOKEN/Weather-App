@@ -1,0 +1,106 @@
+// SHOWCASE STYLES
+
+.showcase{
+    height: 200px;
+    display: flex;
+    background:  linear-gradient(transparent 40%, #f4f4f4 100%),
+                 url("../img/showcase2.jpg") no-repeat center;
+    background-size: cover;
+    // background-attachment: fixed;
+
+    @media(min-width: $small-width){
+        height: 230px;
+    }
+
+    @media(min-width: $medium-width){
+        background-position: 0 5%;
+    }
+
+    form{
+        display: flex;
+        flex-direction: column;
+        width: 80%;
+        margin: auto;
+        margin-bottom: 50px;
+
+        @media(min-width: $small-width){
+            display: flex;
+            flex-direction: row;
+            width: 350px;
+        }
+
+        @media(min-width: $medium-width){
+            width: 500px;
+        }
+    }
+
+    input, button{
+        outline: none;
+        @include border($border: 0, $border-radius: 5px);
+    }
+
+    input{
+        width: $input-width-small;
+        font-size: 20px;
+        padding: 5px;
+        border: 2px solid $topNav-background-color;
+
+        @media(min-width: $small-width){
+            width: 60%;
+        }
+
+        @media(min-width: $medium-width){
+            width: 70%;
+        }
+
+    }
+
+    button{
+        width: $button-width-small;
+        margin: 5px auto;
+        font-size: 18px;
+        padding: 4px;
+        font-weight: bold;
+        color: white;
+        background-color: darken($color: $topNav-background-color, $amount: 5%);
+
+        @media(min-width: $small-width){
+            width: 40%;
+            margin: 2px 0 2px 4px;
+        }
+
+        @media(min-width: $medium-width){
+            width: 30%;
+            margin: 2px 0 2px 4px;
+        }
+    }
+
+    button:hover{
+        background-color: black;
+        color: white;
+    }
+
+    input:focus{
+        box-shadow: 2px 2px 70px 5px white;
+    }
+}
+
+
+// SHOWCASE STYLES
+
+.getAll{
+    text-align: center;
+    margin-top: 5px;
+    font-size: $showcase-small-h1;
+
+    @media(min-width: $small-width){
+        font-size: $showcase-medium-h1;
+    }
+
+    @media(min-width: $medium-width){
+        font-size: $showcase-large-h1;
+    }
+    h1{
+        opacity: 0.7;
+    }
+}
